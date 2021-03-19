@@ -8,9 +8,10 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class NorthwindContext:DbContext
     {
+        //CRUD: Create + READ + UPDATE + DELETE
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocalDB;Database=Northwind;Trusted_Connected=true");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocalDB;Database=Northwind");
         }
 
         public DbSet<Product> Products { get; set; }
